@@ -20,5 +20,14 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - Add scripts to add and edit profiles using JS.
 - Add a little bit more animation to improve impression.
 
-- [link](https://ievlev-alex.github.io/se_project_aroundtheus)
+
+## Preview
+![1](https://github.com/user-attachments/assets/218e468f-0699-4d74-804e-8c0df7308182)
+
+![3](https://github.com/user-attachments/assets/e3874da3-f1dc-4842-890b-9a1cae90976e)
+
+
+## Links
+- [Project link](https://ievlev-alex.github.io/se_project_aroundtheus)
 - [GitHub](https://github.com/ievlev-alex/se_project_aroundtheus)
+
