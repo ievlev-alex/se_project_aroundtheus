@@ -10,14 +10,15 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - Flexbox
 - Grid
 - Positioning
+- Text Overflow
 - Flat BEM file structure
 - CSS transform
 - Optimized for different resolutions
 
 ## Plan on improving the project
 
-Add scripts to add and edit profiles using JS.
-Add a little bit more animation to improve impression.
+- Add scripts to add and edit profiles using JS.
+- Add a little bit more animation to improve impression.
 
-link: https://ievlev-alex.github.io/se_project_aroundtheus
-GitHub: https://github.com/ievlev-alex/se_project_aroundtheus
+- [link](https://ievlev-alex.github.io/se_project_aroundtheus)
+- [GitHub](https://github.com/ievlev-alex/se_project_aroundtheus)

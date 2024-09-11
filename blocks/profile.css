@@ -30,13 +30,10 @@
   line-height: 1.2;
   grid-area: description;
   margin: 0;
+  max-width: 373px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 373px;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .profile__photo {
