@@ -28,6 +28,7 @@ This is the third project of the Software Engineering program at TripleTen. It w
 
 
 ## Links
+- [Desktop capture video link](https://drive.google.com/file/d/1XSCoxs6NOorg5OV3bub9dd2F-tbKki4v/view?usp=sharing)
 - [Project link](https://ievlev-alex.github.io/se_project_aroundtheus)
 - [GitHub](https://github.com/ievlev-alex/se_project_aroundtheus)
 
