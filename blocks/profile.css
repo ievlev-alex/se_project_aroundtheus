@@ -16,7 +16,7 @@
 .profile__title {
   font-size: 42px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.15;
   grid-area: title;
   margin: 0;
   text-overflow: ellipsis;
@@ -42,16 +42,6 @@
   object-fit: cover;
   background-position: center;
   margin-right: 24px;
-}
-
-.profile__photo:hover {
-  scale: 130%;
-  transition: 0.5s;
-}
-
-.profile__photo:not(:hover) {
-  scale: 100%;
-  transition: 0.5s;
 }
 
 .profile__edit-button {
@@ -91,7 +81,6 @@
 
   .profile__title {
     font-size: 22px;
-    font-weight: 500;
   }
 
   .profile__description {

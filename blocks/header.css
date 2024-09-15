@@ -1,21 +1,25 @@
 .header {
   margin-top: 45px;
-  height: 74px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
 .header__logo {
   width: 173px;
+  margin-bottom: 41px;
 }
 
 @media screen and (max-width: 580px) {
   .header {
-    height: 56px;
-    margin-top: 28px;
+    box-sizing: border-box;
+    margin: 28px 0 0 0;
+    width: 100%;
   }
 
   .header__logo {
+    padding-left: 27px;
+
     width: 126px;
     height: 24px;
+    margin-bottom: 32px;
   }
 }
