@@ -52,11 +52,11 @@
   align-self: center;
   grid-area: button;
   padding: 0;
+  transition: 0.5s;
 }
 
 .profile__edit-button:hover {
   opacity: 60%;
-  transition: 0.5s;
 }
 
 .profile__add-button {
@@ -67,11 +67,11 @@
   border-radius: 2px;
   margin-left: auto;
   padding: 0;
+  transition: 0.5s;
 }
 
 .profile__add-button:hover {
   opacity: 60%;
-  transition: 0.5s;
 }
 
 @media screen and (max-width: 770px) {
@@ -91,6 +91,10 @@
     width: 18px;
     height: 18px;
   }
+
+  .profile__add-button {
+    margin-left: 10px;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -107,6 +111,10 @@
     margin-bottom: 36px;
     gap: 14px 10px;
     justify-content: center;
+  }
+
+  .profile__title {
+    max-width: 196px;
   }
 
   .profile__photo {
