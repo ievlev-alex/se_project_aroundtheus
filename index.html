@@ -48,98 +48,7 @@
         </section>
 
         <section class="elements page__section">
-          <ul class="elements__list">
-            <li class="card">
-              <img
-                src="./Images/yosemite.jpg"
-                class="card__image"
-                alt="Yosemite Valley photo"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Yosemite Valley</h2>
-                <button
-                  aria-label="Like"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./Images/lake-louise.jpg"
-                class="card__image"
-                alt="Lake Louise photo"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Lake Louise</h2>
-                <button
-                  aria-label="Like"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./Images/bald-mountains.jpg"
-                class="card__image"
-                alt="Bald Mountains photo"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Bald Mountains</h2>
-                <button
-                  aria-label="Like"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./Images/latemar.jpg"
-                class="card__image"
-                alt="Latemar photo"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Latemar</h2>
-                <button
-                  aria-label="Like"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./Images/vanoise.jpg"
-                class="card__image"
-                alt="Vanoise National Park photo"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Vanoise National Park</h2>
-                <button
-                  aria-label="Like"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./Images/lago.jpg"
-                class="card__image"
-                alt="Lago di Braies photo"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Lago di Braies</h2>
-                <button
-                  aria-label="Like"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="elements__list"></ul>
         </section>
       </main>
 
@@ -156,12 +65,14 @@
           <input
             type="text"
             name="title"
+            id="profile-title-input"
             class="modal__form-textfield"
             placeholder="Jacques Cousteau"
           />
           <input
             type="text"
             name="description"
+            id="profile-description-input"
             class="modal__form-textfield"
             placeholder="Explorer"
           />
@@ -169,6 +80,20 @@
         </form>
       </div>
     </div>
+
+    <template id="card-template">
+      <li class="card">
+        <img class="card__image" src= alt= />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button
+            aria-label="Like"
+            class="card__like-button"
+            type="button"
+          ></button>
+        </div>
+      </li>
+    </template>
 
     <script src="scripts/index.js"></script>
   </body>
