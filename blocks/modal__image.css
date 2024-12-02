@@ -1,0 +1,28 @@
+.modal__container_image {
+  height: auto;
+  width: auto;
+  padding: 0;
+  background-color: transparent;
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.modal__image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.modal__heading_image {
+  color: #fff;
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 580px) {
+  .modal__close_image {
+    bottom: calc(100% + 5px);
+    left: calc(100% + 5px);
+  }
+}

@@ -53,6 +53,7 @@
   grid-area: button;
   padding: 0;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .profile__edit-button:hover {
@@ -68,6 +69,7 @@
   margin-left: auto;
   padding: 0;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .profile__add-button:hover {

@@ -56,8 +56,8 @@
         <p class="footer__copyright">&copy; 2024 Alex ievlev</p>
       </footer>
     </div>
-
-    <div class="modal">
+    <!--Edit Profile Modal-->
+    <div class="modal" id="profile-modal">
       <div class="modal__container">
         <button class="modal__close"></button>
         <p class="modal__heading">Edit profile</p>
@@ -80,10 +80,50 @@
         </form>
       </div>
     </div>
-
+    <!--Add New Card Modal-->
+    <div class="modal" id="add-modal">
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <p class="modal__heading">New place</p>
+        <form class="modal__form">
+          <input
+            type="text"
+            name="image-title"
+            id="add-title-input"
+            class="modal__form-textfield"
+            placeholder="Title"
+          />
+          <input
+            type="text"
+            name="link"
+            id="add-link-input"
+            class="modal__form-textfield"
+            placeholder="Image link"
+          />
+          <button class="modal__button">Create</button>
+        </form>
+      </div>
+    </div>
+    <!--Image Modal-->
+    <div class="modal modal__content_type_image" id="image-modal">
+      <div class="modal__container modal__container_image">
+        <img class="modal__image" src="" alt="" />
+        <button class="modal__close modal__close_image"></button>
+        <p
+          class="modal__heading modal__heading_image"
+          id="image-modal-title"
+        ></p>
+      </div>
+    </div>
+    <!--Templates-->
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
+        <button
+          aria-label="Delete"
+          class="card__delete-button"
+          type="button"
+        ></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button
