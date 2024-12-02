@@ -104,7 +104,7 @@ function getCardElement(cardData) {
   // Image modal
   cardImageEl.addEventListener("click", () => {
     imageModalPicture.src = cardData.link;
-    imageModalTitle.alt = cardData.name;
+    imageModalPicture.alt = cardData.name;
     imageModalTitle.textContent = cardData.name;
     openPopUp(imageModal);
   });
@@ -116,16 +116,18 @@ function getCardElement(cardData) {
 }
 initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
 
-profileTitleInput.value = profileTitle.textContent;
-profileDescriptionInput.value = profileDescription.textContent;
-
 closeButtons.forEach((button) => {
   const popUp = button.closest(".modal");
   button.addEventListener("click", () => closePopUp(popUp));
 });
 
 // Event Listneres
-profileEditBtn.addEventListener("click", () => openPopUp(profileEditModal));
+profileEditBtn.addEventListener("click", () => {
+  profileTitleInput.value = profileTitle.textContent;
+  profileDescriptionInput.value = profileDescription.textContent;
+  openPopUp(profileEditModal);
+});
+
 profileEditForm.addEventListener("submit", handleProfileFormSubmit);
 addCardBtn.addEventListener("click", () => openPopUp(addCardModal));
 addCardForm.addEventListener("submit", addImage);
