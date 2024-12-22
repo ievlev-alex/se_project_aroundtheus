@@ -55,6 +55,7 @@ const cardTemplate =
 
 // Close Button
 const closeButtons = document.querySelectorAll(".modal__close");
+const openedModal = document.querySelector(".modal_opened");
 
 // Functions
 function openPopUp(modal) {
@@ -121,6 +122,18 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", () => closePopUp(popUp));
 });
 
+// Closing the Popup by Clicking on the Overlay and by Pressing Esc.
+function handleCloseModal(evt) {
+  const openedModal = document.querySelector(".modal_opened");
+  if (!openedModal) return;
+  if (evt.type === "keydown" && evt.key === "Escape") {
+    closePopUp(openedModal);
+  }
+  if (evt.type === "click" && evt.target === openedModal) {
+    closePopUp(openedModal);
+  }
+}
+
 // Event Listneres
 profileEditBtn.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
@@ -131,3 +144,5 @@ profileEditBtn.addEventListener("click", () => {
 profileEditForm.addEventListener("submit", handleProfileFormSubmit);
 addCardBtn.addEventListener("click", () => openPopUp(addCardModal));
 addCardForm.addEventListener("submit", addImage);
+document.addEventListener("click", handleCloseModal);
+document.addEventListener("keydown", handleCloseModal);
