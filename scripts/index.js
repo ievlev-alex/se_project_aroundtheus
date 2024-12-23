@@ -55,14 +55,17 @@ const cardTemplate =
 
 // Close Button
 const closeButtons = document.querySelectorAll(".modal__close");
-const openedModal = document.querySelector(".modal_opened");
 
 // Functions
 function openPopUp(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleCloseModal);
+  modal.addEventListener("click", handleCloseModal);
 }
 function closePopUp(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleCloseModal);
+  modal.removeEventListener("click", handleCloseModal);
 }
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -144,5 +147,3 @@ profileEditBtn.addEventListener("click", () => {
 profileEditForm.addEventListener("submit", handleProfileFormSubmit);
 addCardBtn.addEventListener("click", () => openPopUp(addCardModal));
 addCardForm.addEventListener("submit", addImage);
-document.addEventListener("click", handleCloseModal);
-document.addEventListener("keydown", handleCloseModal);

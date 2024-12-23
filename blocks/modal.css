@@ -20,13 +20,15 @@
 }
 
 .modal__container {
+  padding: 36px;
+  box-sizing: border-box;
   background-color: #fff;
   margin: auto;
   border-radius: 10px;
-  padding: 36px;
   position: relative;
-  max-width: 330px;
+  max-width: 430px;
   width: 100%;
+  max-height: 330px;
 }
 
 .modal__close {
@@ -60,12 +62,17 @@
 
 .modal__form {
   max-width: 358px;
+  width: 100%;
   margin-top: 54px;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  gap: 30px;
 }
 
 .modal__form-textfield {
+  max-width: 358px;
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
@@ -86,32 +93,37 @@
   line-height: 14px;
   color: rgba(255, 0, 0, 1);
   padding: 0;
-  margin-bottom: 30px;
   transition: opacity 0.3s;
   visibility: hidden;
+  position: absolute;
 }
 
 .modal__error-text-visible {
   visibility: visible;
 }
 
+.modal__label {
+  position: relative;
+}
+
 .modal__button {
   max-width: 358px;
+  width: 100%;
   max-height: 50px;
   border-radius: 2px;
   color: #fff;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
-  margin-top: 18px;
   background-color: #000;
   border: none;
+  margin-top: 18px;
   padding: 14px 125px 19px 125px;
   transition: 0.3s;
   cursor: pointer;
 }
 
-.modal__button-inactive {
+.modal__button_inactive {
   color: rgba(0, 0, 0, 1);
   opacity: 20%;
   background-color: rgba(246, 246, 246, 1);

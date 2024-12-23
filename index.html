@@ -62,31 +62,38 @@
         <button class="modal__close"></button>
         <p class="modal__heading">Edit profile</p>
         <form class="modal__form" id="profileEditForm" novalidate>
-          <input
-            type="text"
-            name="title"
-            id="profile-title-input"
-            class="modal__form-textfield"
-            placeholder="Name"
-            minlength="2"
-            maxlength="40"
-            required
-          />
-          <span class="modal__error-text" id="profile-title-input-error"></span>
-          <input
-            type="text"
-            name="description"
-            id="profile-description-input"
-            class="modal__form-textfield"
-            placeholder="About"
-            minlength="2"
-            maxlength="200"
-            required
-          />
-          <span
-            class="modal__error-text"
-            id="profile-description-input-error"
-          ></span>
+          <label class="modal__label">
+            <input
+              type="text"
+              name="title"
+              id="profile-title-input"
+              class="modal__form-textfield"
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span
+              class="modal__error-text"
+              id="profile-title-input-error"
+            ></span>
+          </label>
+          <label class="modal__label">
+            <input
+              type="text"
+              name="description"
+              id="profile-description-input"
+              class="modal__form-textfield"
+              placeholder="About"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span
+              class="modal__error-text"
+              id="profile-description-input-error"
+            ></span>
+          </label>
           <button class="modal__button">Save</button>
         </form>
       </div>
@@ -97,26 +104,30 @@
         <button class="modal__close"></button>
         <p class="modal__heading">New place</p>
         <form class="modal__form" id="addCardForm" novalidate>
-          <input
-            type="text"
-            name="image-title"
-            id="add-title-input"
-            class="modal__form-textfield"
-            placeholder="Title"
-            minlength="1"
-            maxlength="30"
-            required
-          />
-          <span class="modal__error-text" id="add-title-input-error"></span>
-          <input
-            type="url"
-            name="link"
-            id="add-link-input"
-            class="modal__form-textfield"
-            placeholder="Image link"
-            required
-          />
-          <span class="modal__error-text" id="add-link-input-error"></span>
+          <label class="modal__label">
+            <input
+              type="text"
+              name="image-title"
+              id="add-title-input"
+              class="modal__form-textfield"
+              placeholder="Title"
+              minlength="1"
+              maxlength="30"
+              required
+            />
+            <span class="modal__error-text" id="add-title-input-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              type="url"
+              name="link"
+              id="add-link-input"
+              class="modal__form-textfield"
+              placeholder="Image link"
+              required
+            />
+            <span class="modal__error-text" id="add-link-input-error"></span>
+          </label>
           <button class="modal__button modal__button-inactive" disabled>
             Create
           </button>

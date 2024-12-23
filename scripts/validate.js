@@ -65,7 +65,7 @@ const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__form-textfield",
   submitButtonSelector: ".modal__button",
-  inactiveButtonClass: "modal__button-inactive",
+  inactiveButtonClass: "modal__button_inactive",
   inputErrorClass: "modal__form-textfield-error",
   errorClass: "modal__error-text-visible",
 };
