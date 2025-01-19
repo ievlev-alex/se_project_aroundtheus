@@ -35,11 +35,10 @@ class Card {
     this._element = this._getTemplate();
     this._setEventListeners();
 
-    const cardImage = this._element.querySelector(".card__image");
     const cardTitle = this._element.querySelector(".card__title");
 
-    cardImage.src = this._link;
-    cardImage.alt = this._name;
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
     cardTitle.textContent = this._name;
 
     return this._element;

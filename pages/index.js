@@ -28,7 +28,8 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
   },
 ];
-// Edit Profile Modal Variables
+
+// DOM elements
 const profileEditBtn = document.querySelector(".profile__edit-button");
 const profileEditModal = document.querySelector("#profile-modal");
 const profileTitle = document.querySelector(".profile__title");
@@ -37,24 +38,17 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-const profileEditForm = document.forms["profileEditForm"];
-
-// Add New Card Modal Variables
+const profileEditForm = document.querySelector("#profileEditForm");
+const editForm = document.forms["editForm"];
 const addCardBtn = document.querySelector(".profile__add-button");
 const addCardModal = document.querySelector("#add-modal");
 const addCardTitleInput = document.querySelector("#add-title-input");
 const addCardLinkInput = document.querySelector("#add-link-input");
 const addCardForm = document.forms["addCardForm"];
-
-// Image Modal
 const imageModal = document.querySelector("#image-modal");
 const imageModalPicture = imageModal.querySelector(".modal__image");
 const imageModalTitle = imageModal.querySelector("#image-modal-title");
-
-// Card Template
 const cardListEl = document.querySelector(".elements__list");
-
-// Close Button
 const closeButtons = document.querySelectorAll(".modal__close");
 
 // Functions
@@ -72,14 +66,18 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  editFormValidator.disableButton();
+  formValidators["editForm"].disableButton();
 
   closePopUp(profileEditModal);
 }
 
-function renderCard(cardData, cardListEl) {
+function createCard(cardData) {
   const card = new Card(cardData, "#card-template", handleImageClick);
-  const cardElement = card.createCard();
+  return card.createCard();
+}
+
+function renderCard(cardData, cardListEl) {
+  const cardElement = createCard(cardData);
   cardListEl.prepend(cardElement);
 }
 
@@ -88,8 +86,7 @@ function addImage(evt) {
   const name = addCardTitleInput.value;
   const link = addCardLinkInput.value;
   renderCard({ name, link }, cardListEl);
-  evt.target.reset();
-  addFormValidator.resetValidation();
+  formValidators["addCardForm"].disableButton();
   closePopUp(addCardModal);
 }
 
@@ -125,7 +122,7 @@ profileEditBtn.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
 
-  editFormValidator.resetValidation();
+  formValidators["editForm"].resetValidation();
   openPopUp(profileEditModal);
 });
 
@@ -135,6 +132,7 @@ addCardForm.addEventListener("submit", addImage);
 
 // Validation
 const validationSettings = {
+  formSelector: ".modal__form",
   inputSelector: ".modal__form-textfield",
   submitButtonSelector: ".modal__button",
   inactiveButtonClass: "modal__button_inactive",
@@ -142,14 +140,19 @@ const validationSettings = {
   errorClass: "modal__error-text-visible",
 };
 
-const editFormElement = profileEditModal.querySelector("#profileEditForm");
-const addFormElement = addCardModal.querySelector("#addCardForm");
+const formValidators = {};
 
-const editFormValidator = new FormValidator(
-  validationSettings,
-  editFormElement
-);
-const addFormValidator = new FormValidator(validationSettings, addFormElement);
+const enableValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
+  formList.forEach((formElement) => {
+    const validator = new FormValidator(config, formElement);
+    const formName = formElement.getAttribute("name");
 
-editFormValidator.enableValidation();
-addFormValidator.enableValidation();
+    if (formName) {
+      formValidators[formName] = validator;
+      validator.enableValidation();
+    }
+  });
+};
+console.log("Form Validators:", formValidators);
+enableValidation(validationSettings);
