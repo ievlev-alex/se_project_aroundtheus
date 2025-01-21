@@ -86,6 +86,8 @@ function addImage(evt) {
   const name = addCardTitleInput.value;
   const link = addCardLinkInput.value;
   renderCard({ name, link }, cardListEl);
+  addCardTitleInput.value = "";
+  addCardLinkInput.value = "";
   formValidators["editForm"].disableButton();
   closePopUp(addCardModal);
 }
