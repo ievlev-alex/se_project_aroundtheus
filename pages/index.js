@@ -38,8 +38,7 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-const profileEditForm = document.querySelector("#profileEditForm");
-const editForm = document.forms["editForm"];
+const profileEditForm = document.forms["profileEditForm"];
 const addCardBtn = document.querySelector(".profile__add-button");
 const addCardModal = document.querySelector("#add-modal");
 const addCardTitleInput = document.querySelector("#add-title-input");
@@ -88,7 +87,7 @@ function addImage(evt) {
   renderCard({ name, link }, cardListEl);
   addCardTitleInput.value = "";
   addCardLinkInput.value = "";
-  formValidators["editForm"].disableButton();
+  formValidators["cardForm"].disableButton();
   closePopUp(addCardModal);
 }
 
