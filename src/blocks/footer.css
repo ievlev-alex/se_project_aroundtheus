@@ -13,13 +13,13 @@
   .footer__copyright {
     max-width: 581px;
   }
-
-  @media screen and (max-width: 634px) {
-    .footer__copyright {
-      margin-top: 48px;
-      margin-bottom: 36px;
-      font-size: 14px;
-      max-width: 282px;
-      padding: 0 19px;
 }
+@media screen and (max-width: 634px) {
+  .footer__copyright {
+    margin-top: 48px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    max-width: 282px;
+    padding: 0 19px;
+  }
 }

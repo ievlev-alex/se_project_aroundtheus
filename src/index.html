@@ -11,14 +11,13 @@
     />
     <title>Around the U.S.</title>
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
 
   <body class="page">
     <div class="page__content">
       <header class="header page__section">
         <img
-          src="./Images/Logo.svg"
+          src="<%=require('./images/logo.svg')%>"
           class="header__logo"
           alt="Around The U.S. official logo"
         />
@@ -27,9 +26,9 @@
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./Images/jacques-cousteau.jpg"
+            src="<%=require('./images/jacques-cousteau.jpg')%>"
             class="profile__photo"
-            alt="avatar"
+            alt="Avatar"
           />
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
@@ -70,7 +69,7 @@
           <label class="modal__label">
             <input
               type="text"
-              name="title"
+              name="name"
               id="profile-title-input"
               class="modal__form-textfield"
               placeholder="Name"
@@ -86,7 +85,7 @@
           <label class="modal__label">
             <input
               type="text"
-              name="description"
+              name="job"
               id="profile-description-input"
               class="modal__form-textfield"
               placeholder="About"
@@ -169,7 +168,5 @@
         </div>
       </li>
     </template>
-
-    <script defer src="./pages/index.js" type="module"></script>
   </body>
 </html>
