@@ -1,6 +1,6 @@
 # Project 8: Around The U.S.
 
-This is the roject of the Software Engineering program at TripleTen. It was created using HTML and CSS and JS, based on the Figma's project.
+This is the project of the Software Engineering program at TripleTen. It was created using HTML and CSS and JS, based on the Figma's project.
 
 - [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
 
