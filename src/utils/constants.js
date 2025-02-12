@@ -30,4 +30,13 @@ const initialCards = [
 const profileEditBtn = document.querySelector(".profile__edit-button");
 const addCardBtn = document.querySelector(".profile__add-button");
 
-export { initialCards, profileEditBtn, addCardBtn };
+const validationSettings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__form-textfield",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_inactive",
+  inputErrorClass: "modal__form-textfield-error",
+  errorClass: "modal__error-text-visible",
+};
+
+export { initialCards, profileEditBtn, addCardBtn, validationSettings };
