@@ -85,7 +85,7 @@
           <label class="modal__label">
             <input
               type="text"
-              name="job"
+              name="about"
               id="profile-description-input"
               class="modal__form-textfield"
               placeholder="About"
@@ -147,6 +147,44 @@
           class="modal__heading modal__heading_image"
           id="image-modal-title"
         ></p>
+      </div>
+    </div>
+    <!--Delete Card Modal-->
+    <div class="modal" id="delete-modal">
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <form class="modal__form">
+          <p class="modal__heading">Are you sure?</p>
+          <button class="modal__button">Yes</button>
+        </form>
+      </div>
+    </div>
+    <!--Change Profile Picture Modal-->
+    <div class="modal" id="change-modal">
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <p class="modal__heading">Change profile picture</p>
+        <form
+          class="modal__form"
+          id="changePictureForm"
+          name="cardForm"
+          novalidate
+        >
+          <label class="modal__label">
+            <input
+              type="url"
+              name="link"
+              id="profile-link-input"
+              class="modal__form-textfield"
+              placeholder="Image link"
+              required
+            />
+            <span class="modal__error-text" id="add-link-input-error"></span>
+          </label>
+          <button class="modal__button modal__button-inactive" disabled>
+            Save
+          </button>
+        </form>
       </div>
     </div>
     <!--Templates-->
