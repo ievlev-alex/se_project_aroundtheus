@@ -25,11 +25,18 @@
 
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/jacques-cousteau.jpg')%>"
-            class="profile__photo"
-            alt="Avatar"
-          />
+          <div class="profile__photo-container">
+            <img
+              src="<%=require('./images/jacques-cousteau.jpg')%>"
+              class="profile__photo"
+              alt="Avatar"
+            />
+            <button
+              type="button"
+              class="profile__photo-edit"
+              aria-label="Edit profile picture"
+            ></button>
+          </div>
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button
@@ -52,7 +59,7 @@
       </main>
 
       <footer class="footer page__section">
-        <p class="footer__copyright">&copy; 2024 Alex ievlev</p>
+        <p class="footer__copyright">&copy; 2025 Alex ievlev</p>
       </footer>
     </div>
     <!--Edit Profile Modal-->
@@ -173,13 +180,13 @@
           <label class="modal__label">
             <input
               type="url"
-              name="link"
-              id="profile-link-input"
+              name="avatar"
+              id="avatar-link-input"
               class="modal__form-textfield"
               placeholder="Image link"
               required
             />
-            <span class="modal__error-text" id="add-link-input-error"></span>
+            <span class="modal__error-text" id="avatar-link-input-error"></span>
           </label>
           <button class="modal__button modal__button-inactive" disabled>
             Save

@@ -28,7 +28,6 @@ class PopupWithChangeProfile extends Popup {
       event.preventDefault();
       this._handleSubmit(this._getInputValues());
       this._form.reset();
-      this.close();
     });
   }
 }

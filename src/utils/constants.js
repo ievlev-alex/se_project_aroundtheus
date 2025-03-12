@@ -29,6 +29,7 @@ const initialCards = [
 // DOM elements
 const profileEditBtn = document.querySelector(".profile__edit-button");
 const addCardBtn = document.querySelector(".profile__add-button");
+const avatarElement = document.querySelector(".profile__photo-container");
 
 const validationSettings = {
   formSelector: ".modal__form",
@@ -39,4 +40,10 @@ const validationSettings = {
   errorClass: "modal__error-text-visible",
 };
 
-export { initialCards, profileEditBtn, addCardBtn, validationSettings };
+export {
+  initialCards,
+  profileEditBtn,
+  addCardBtn,
+  validationSettings,
+  avatarElement,
+};

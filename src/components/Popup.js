@@ -20,6 +20,17 @@ class Popup {
     }
   }
 
+  renderLoading(isLoading) {
+    const submitButton = this._popup.querySelector(".modal__button");
+    if (submitButton) {
+      if (isLoading) {
+        submitButton.textContent = "Saving...";
+      } else {
+        submitButton.textContent = "Save";
+      }
+    }
+  }
+
   setEventListeners() {
     this._popup.addEventListener("click", (event) => {
       if (
