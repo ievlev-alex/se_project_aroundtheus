@@ -27,7 +27,7 @@ class FormValidator {
       errorElement.classList.remove(this._errorClass);
       errorElement.textContent = "";
     } else {
-      console.warn(`Не найден элемент ошибки для input #${inputElement.id}`);
+      console.warn(`Not found input element #${inputElement.id}`);
     }
   }
 
