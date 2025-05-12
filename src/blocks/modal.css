@@ -167,3 +167,18 @@
     bottom: calc(100% + 13px);
   }
 }
+
+#delete-modal .modal__heading {
+  line-height: 100%;
+}
+#delete-modal .modal__form {
+  margin-top: 0px;
+  gap: 0;
+}
+#delete-modal .modal__container {
+  padding: 34px 36px 36px 36px;
+  max-height: 181px;
+}
+#delete-modal .modal__button {
+  margin-top: 38px;
+}

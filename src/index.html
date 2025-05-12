@@ -25,11 +25,18 @@
 
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/jacques-cousteau.jpg')%>"
-            class="profile__photo"
-            alt="Avatar"
-          />
+          <div class="profile__photo-container">
+            <img
+              src="<%=require('./images/jacques-cousteau.jpg')%>"
+              class="profile__photo"
+              alt="Avatar"
+            />
+            <button
+              type="button"
+              class="profile__photo-edit"
+              aria-label="Edit profile picture"
+            ></button>
+          </div>
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button
@@ -52,7 +59,7 @@
       </main>
 
       <footer class="footer page__section">
-        <p class="footer__copyright">&copy; 2024 Alex ievlev</p>
+        <p class="footer__copyright">&copy; 2025 Alex ievlev</p>
       </footer>
     </div>
     <!--Edit Profile Modal-->
@@ -85,7 +92,7 @@
           <label class="modal__label">
             <input
               type="text"
-              name="job"
+              name="about"
               id="profile-description-input"
               class="modal__form-textfield"
               placeholder="About"
@@ -147,6 +154,44 @@
           class="modal__heading modal__heading_image"
           id="image-modal-title"
         ></p>
+      </div>
+    </div>
+    <!--Delete Card Modal-->
+    <div class="modal" id="delete-modal">
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <form class="modal__form">
+          <p class="modal__heading">Are you sure?</p>
+          <button class="modal__button">Yes</button>
+        </form>
+      </div>
+    </div>
+    <!--Change Profile Picture Modal-->
+    <div class="modal" id="change-modal">
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <p class="modal__heading">Change profile picture</p>
+        <form
+          class="modal__form"
+          id="changePictureForm"
+          name="avatarForm"
+          novalidate
+        >
+          <label class="modal__label">
+            <input
+              type="url"
+              name="avatar"
+              id="avatar-link-input"
+              class="modal__form-textfield"
+              placeholder="Image link"
+              required
+            />
+            <span class="modal__error-text" id="avatar-link-input-error"></span>
+          </label>
+          <button class="modal__button modal__button-inactive" disabled>
+            Save
+          </button>
+        </form>
       </div>
     </div>
     <!--Templates-->
